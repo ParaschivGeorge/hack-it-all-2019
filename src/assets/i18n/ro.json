@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "home": "Acasă",
+    "about": "Despre",
+    "signup": "Înscriere",
+    "faq": "Întrebări frecvente",
+    "faqShort": "Întrebări",
+    "sponsors": "Sponsori"
+  },
+  "home": {
+    "homeText": {
+      "para1": "Ești în căutarea unui concurs de programare care să îți testeze capacitatea de a lucra sub presiune alături de alți 2 maeștri în hacking? Ești nerăbdător să-ți demonstrezi aptitudinile de programator și să cunoști oameni entuziasmați de multiple provocări intelectuale?",
+      "para2": "Ediția aceasta HackITall revine într-o nouă formulă, în mediul online. O serie de mini-hackathoane va reprezenta provocarea perfectă pentru toți pasionații de coding dornici să-și depășească limitele și să-și pună la încercare cunoștințele de programare.",
+      "para3": "Înscrie-te alături de 2 prieteni la HackITall pentru a demonstra că sunteți cei mai buni și intrați împreună în bătălia pentru premiile puse în joc în perioada 5-6 decembrie 2020!"
+    }
+  },
+  "about": {
+    "aboutText": {
+      "para1": "HackITall este un eveniment ce pune în prim-plan studenţii facultăţilor de profil tehnic, pasionaţi de domeniul IT&C. El îşi propune susţinerea acestora în dezvoltarea personală şi îmbunătăţirea competenţelor tehnice. Într-un mediu antrenant, acest hackathon îi determină pe participanți să lucreze în echipă, aflaţi sub presiunea unui deadline impus.",
+      "para2": {
+        "main": "HackITall este constituit din mai multe probe de concurs:",
+        "item1": "două mini-hackathoane ce presupun dezvoltarea unor proiecte software complet funcționale în 24 de ore pe teme date de către sponsorii oficiali",
+        "item2": "o probă de algoritmică ce se va desfăşura pe o durată de 6 ore, timp în care concurenții vor trebui să rezolve anumite probleme ce vor urma a fi jurizate în funcție de performanțele atinse"
+      },
+      "para3": "Aflându-se la cea de-a șaptea ediție, HackITall este o tradiție, iar datorită succesului adus de un asemenea eveniment şi dorinţei multor studenţi de a participa, acesta se desfăşoară pe parcursul a două ediţii într-un an universitar: în iarnă şi în primăvară. Ediția precedentă s-a bucurat de interesul a 65 de echipe alcătuite din 3 membri. Dintre acestea, 20 au fost alese de către reprezentanții sponsorului principal pentru a participa.",
+      "para4": "Semestrul acesta, evenimentul se va desfășura în weekend-ul 5-6 decembrie 2020, în mediul online, iar înscrierile vor avea loc în perioada 2-14 noiembrie."
+    }
+  },
+  "frequentQuestions": {
+    "questions": {
+      "q1": {
+        "q": "Cine este în juriu?",
+        "a": "Juriul este format din reprezentanți ai sponsorului principal."
+      },
+      "q2": {
+        "q": "Cine selectează echipele?",
+        "a": "Echipele participante sunt selectate de către sponsorul evenimentului."
+      },
+      "q3": {
+        "q": "Cât durează concursul?",
+        "a": "Concursul este format din două mini-hackathoane ce vor dura 24 de ore și o probă de algoritmică de 6 ore. După fiecare probă echipele prezintă ce au făcut, iar juriul decide echipele câștigătoare."
+      },
+      "q4": {
+        "q": "Când încep probele?",
+        "a": "Toate probele vor începe sâmbătă, pe 5 decembrie, la ora 10."
+      },
+      "q5": {
+        "q": "Pot participa la ambele probe ale concursului?",
+        "a": "Nu, deoarece cele două probe se desfășoară în paralel."
+      },
+      "q6": {
+        "q": "Care este structura unei echipe?",
+        "a": "O echipă este formată din 3 studenți."
+      },
+      "q7": {
+        "q": "Pot participa dacă nu sunt de la Facultatea de Automatică și Calculatoare?",
+        "a": "Da, poți. Ediția aceasta ne dorim echipe cât mai mixte."
+      },
+      "q8": {
+        "q": "Trebuie să folosim anumite limbaje de programare?",
+        "a": "Nu există restricții de limbaj de programare."
+      },
+      "q9": {
+        "q": "Trebuie să plătesc o taxă de înregistrare pentru a participa?",
+        "a": "Nu, înregistrarea este gratuită."
+      },
+      "q10": {
+        "q": "Pot să mă înregistrez la HackITall, chiar dacă acesta ar fi primul meu hackathon?",
+        "a": "Da, vă încurajăm să vă înregistrați, deoarece „Înveți făcând”."
+      }
+    }
+  },
+  "signUp": {
+    "signUpFor": "Înscrie-te la",
+    "algorithms": "Algoritmică",
+    "hackathon": "Hackathon",
+    "next": "Următorul",
+    "back": "Înapoi",
+    "submit": "Trimite",
+    "successMessage": "V-ați inregistrat cu succes!",
+    "error": "A apărut o eroare, încercați din nou mai târziu.",
+    "register": {
+      "hackDesc": "În cadrul acestei probe vei avea ocazia să dezvolți un proiect software complet funcțional în decursul a 24 de ore, pe o temă dată de către sponsorul oficial. Ia-ți 2 prieteni și înregistrați-vă pentru a intra împreună în cursa pentru marele premiu!",
+      "algoDesc": "În cadrul acestei probe vei avea ocazia să demonstrezi de-a lungul a 6 ore că algoritmii nu mai au niciun secret pentru tine și ceilalți 2 colegi alături de care vei forma o echipă. Aplică pentru a arăta că sunteți cei mai buni!"
+    },
+    "teamRegister": {
+      "team": "Echipă",
+      "teamName": "Nume echipă",
+      "chooseCompetition": "Alege competiția",
+      "competition": "Competiția",
+      "redistribution": "Înscriu echipa mea și la celălalt hackathon care va reprezenta cea de-a doua opțiune"
+    },
+    "memberRegister": {
+      "captain": "Căpitan",
+      "teammate": "Coechipier",
+      "lastName": "Nume",
+      "firstName": "Prenume complet",
+      "email": "Email",
+      "phone": "Telefon",
+      "university": "Universitate",
+      "faculty": "Facultate",
+      "year": "An",
+      "years": {
+        "year1": "Licență anul 1",
+        "year2": "Licență anul 2",
+        "year3": "Licență anul 3",
+        "year4": "Licență anul 4",
+        "year5": "Master anul 1",
+        "year6": "Master anul 2"
+      },
+      "cvLink": "Link CV",
+      "gdpr1": "Prin înscrierea la acest eveniment confirm faptul că am luat la cunoștință ",
+      "gdpr2": "informarea privind protecția datelor cu caracter personal",
+      "gdpr3": " anexată și sunt de acord cu întregul conținut."
+    }
+  },
+  "sponsors": {
+    "mediaPartners": "Parteneri",
+    "janeStreetDesc": "Jane Street este o firmă de tranzacționare cantitativă și un furnizor de lichiditate care activează la nivel global. Sunt activi în peste 45 de țări în jurul lumii cu tranzacții zilnice de peste 21 de miliarde de dolari. Succesul lor se datorează utilizării unor tehnologii inovatoare, abordării științifice și înțelegerii profunde a pieței, toate acestea fiind bazate pe o modelare matematică și strategii bine gândite.",
+    "dbDesc": "DB Global Technology este centrul de tehnologie al Deutsche Bank din Europa Centrală și de Est, unde se dezvoltă aplicații de ultima generație pentru diverse tipuri de servicii financiare precum: produse bancare adresate firmelor sau persoanelor fizice, gestionarea activelor, anti-fraudă financiară, conformitate, gestionarea riscurilor non-bancare, achiziții globale. Compania este constituită dintr-o echipa de aproape 1.000 de specialiști care acoperă numeroase domenii: project management, arhitectură IT, analiză de business și tehnologie, dezvoltare software, asigurarea calității.",
+    "bcrDesc": "Banca Comerciala Română (BCR), membră a Erste Group, este cel mai important grup financiar din România, ce oferă servicii de bancă universală, leasing, pensii private, fonduri de investiții și produse de economisire-creditare pentru locuinţe, prin intermediul reţelei naționale de sucursale și centre de afaceri. BCR investește constant în acces sigur și facil la servicii financiare, banking pe înțelesul tuturor, consiliere financiară pe termen lung și produse care respectă potențialul fiecărui client."
+  }
+}

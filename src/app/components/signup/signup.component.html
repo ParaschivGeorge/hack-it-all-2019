@@ -1,0 +1,285 @@
+<div class="signup" fxLayout="column" fxLayoutAlign="start center" ngStyle.lt-md="height: 100%">
+  <mat-horizontal-stepper linear="true" #stepper *ngIf="!submitted">
+    <mat-step>
+      <div fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="center center" class="register">
+        <div fxLayout="column" fxLayoutAlign="center center" class="hackRegister" ngStyle.lt-md="width: 100%;">
+          <h2>{{'signUp.signUpFor' | translate}} <br/> {{'signUp.hackathon' | translate}}</h2>
+          <p>{{'signUp.register.hackDesc' | translate}}</p>
+          <button color="primary" class="registerButton" (click)="selectHack()" mat-stroked-button matStepperNext>
+            {{'pages.signup' | translate}}
+          </button>
+        </div>
+        <div fxLayout="column" fxLayoutAlign="center center" class="algoRegister" ngStyle.lt-md="width: 100%">
+          <h2>{{'signUp.signUpFor' | translate}} <br/> {{'signUp.algorithms' | translate}}</h2>
+          <p>{{'signUp.register.algoDesc' | translate}}</p>
+          <button color="primary" class="registerButton" (click)="selectAlgo()" mat-raised-button matStepperNext>
+            {{'pages.signup' | translate}}
+          </button>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="teamRegisterForm">
+      <form class="teamForm" [formGroup]="teamRegisterForm" fxLayout="column" fxLayoutAlign="start center">
+        <h2 *ngIf="!jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.hackathon' | translate}}</h2>
+        <h2 *ngIf="jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.algorithms' | translate}}</h2>
+        <label for="teamName">{{'signUp.teamRegister.team' | translate}}:</label>
+        <mat-form-field>
+          <mat-label>{{'signUp.teamRegister.teamName' | translate}}</mat-label>
+          <input id="teamName" matInput formControlName="teamName" autocomplete="off">
+        </mat-form-field>
+        <label *ngIf="!jsSelected">{{'signUp.teamRegister.chooseCompetition' | translate}}:</label>
+        <label *ngIf="jsSelected">{{'signUp.teamRegister.competition' | translate}}:</label>
+        <div class="teamSelector mat-elevation-z2"
+             [ngClass]="jsSelected ? 'jsSelected' : dbSelected ? 'dbSelected' : bcrSelected ? 'bcrSelected' : 'noSelection'">
+          <div *ngIf="!jsSelected" [ngClass]="dbSelected ? 'selected' : ''" (click)="selectDB()">
+            <p fxHide.lt-sm="true">{{'signUp.hackathon' | translate}} <br/> Deutsche Bank</p>
+            <p fxHide fxShow.lt-sm="true" style="white-space: normal;">Deutsche Bank</p>
+          </div>
+          <div *ngIf="!jsSelected" [ngClass]="bcrSelected ? 'selected' : ''" (click)="selectBCR()"
+               ngStyle.lt-sm="vertical-align: middle">
+            <p fxHide.lt-sm="true">{{'signUp.hackathon' | translate}} <br/> BCR</p>
+            <p fxHide fxShow.lt-sm="true" style="white-space: normal;">BCR</p>
+          </div>
+          <div *ngIf="jsSelected" class="selected" ngStyle.lt-sm="vertical-align: middle">
+            <p fxHide.lt-sm="true">{{'signUp.algorithms' | translate}} <br/> Jane Street</p>
+            <p fxHide fxShow.lt-sm="true" style="white-space: normal;">Jane <br/> Street</p>
+          </div>
+        </div>
+        <section *ngIf="!jsSelected">
+          <mat-checkbox formControlName="redistribution">{{'signUp.teamRegister.redistribution' | translate}}
+          </mat-checkbox>
+        </section>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer" fxHide.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>{{'signUp.back' | translate}}</button>
+          <button color="primary" mat-raised-button matStepperNext>{{'signUp.next' | translate}}</button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer mobile" fxHide
+             fxShow.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button color="primary" mat-raised-button matStepperNext>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="captainRegisterForm">
+      <form class="memberForm" [formGroup]="captainRegisterForm" fxLayout="column" fxLayoutAlign="space-around center">
+        <h2 *ngIf="!jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.hackathon' | translate}}</h2>
+        <h2 *ngIf="jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.algorithms' | translate}}</h2>
+        <p class="teamMemberTitle">{{'signUp.memberRegister.captain' | translate}}:</p>
+        <div fxLayout.lt-sm="column" fxLayout="row" fxLayoutAlign="space-around center" style="width: 100%">
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.lastName' | translate}}</mat-label>
+              <input matInput formControlName="lastName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.firstName' | translate}}</mat-label>
+              <input matInput formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.email' | translate}}</mat-label>
+              <input matInput formControlName="email" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.phone' | translate}}</mat-label>
+              <input matInput formControlName="phone" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.university' | translate}}</mat-label>
+              <input matInput formControlName="university" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.faculty' | translate}}</mat-label>
+              <input matInput formControlName="faculty" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field appearance="fill" ngStyle.lt-sm="max-width: 180px">
+              <mat-label>{{'signUp.memberRegister.year' | translate}}</mat-label>
+              <mat-select formControlName="year">
+                <mat-option *ngFor="let year of years; let i = index" [value]="i">
+                  {{years[i]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.cvLink' | translate}}</mat-label>
+              <input matInput formControlName="cvLink" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <section class="gdpr">
+          <mat-checkbox formControlName="gdpr">{{'signUp.memberRegister.gdpr1' | translate}}
+            <a target="_blank" href="https://drive.google.com/file/d/1c-zt7SSgHOnEc_sN70w-GNy1hWY7UFyz/view">
+              {{'signUp.memberRegister.gdpr2' | translate}}
+            </a>
+            {{'signUp.memberRegister.gdpr3' | translate}}
+          </mat-checkbox>
+        </section>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer" fxHide.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>{{'signUp.back' | translate}}</button>
+          <button color="primary" mat-raised-button matStepperNext>{{'signUp.next' | translate}}</button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer mobile" fxHide
+             fxShow.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button color="primary" mat-raised-button matStepperNext>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="teammate1RegisterForm">
+      <form class="memberForm" [formGroup]="teammate1RegisterForm" fxLayout="column" fxLayoutAlign="space-around center">
+        <h2 *ngIf="!jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.hackathon' | translate}}</h2>
+        <h2 *ngIf="jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.algorithms' | translate}}</h2>
+        <p class="teamMemberTitle">{{'signUp.memberRegister.teammate' | translate}} 1:</p>
+        <div fxLayout.lt-sm="column" fxLayout="row" fxLayoutAlign="space-around center" style="width: 100%">
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.lastName' | translate}}</mat-label>
+              <input matInput formControlName="lastName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.firstName' | translate}}</mat-label>
+              <input matInput formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.email' | translate}}</mat-label>
+              <input matInput formControlName="email" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.phone' | translate}}</mat-label>
+              <input matInput formControlName="phone" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.university' | translate}}</mat-label>
+              <input matInput formControlName="university" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.faculty' | translate}}</mat-label>
+              <input matInput formControlName="faculty" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field appearance="fill" ngStyle.lt-sm="max-width: 180px">
+              <mat-label>{{'signUp.memberRegister.year' | translate}}</mat-label>
+              <mat-select formControlName="year">
+                <mat-option *ngFor="let year of years; let i = index" [value]="i">
+                  {{years[i]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.cvLink' | translate}}</mat-label>
+              <input matInput formControlName="cvLink" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <section class="gdpr">
+          <mat-checkbox formControlName="gdpr">{{'signUp.memberRegister.gdpr1' | translate}}
+            <a target="_blank" href="https://drive.google.com/file/d/1c-zt7SSgHOnEc_sN70w-GNy1hWY7UFyz/view">
+              {{'signUp.memberRegister.gdpr2' | translate}}
+            </a>
+            {{'signUp.memberRegister.gdpr3' | translate}}
+          </mat-checkbox>
+        </section>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer" fxHide.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>{{'signUp.back' | translate}}</button>
+          <button color="primary" mat-raised-button matStepperNext>{{'signUp.next' | translate}}</button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer mobile" fxHide
+             fxShow.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button color="primary" mat-raised-button matStepperNext>
+            <mat-icon>navigate_next</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="teammate2RegisterForm">
+      <form class="memberForm" [formGroup]="teammate2RegisterForm" fxLayout="column" fxLayoutAlign="space-around center" (ngSubmit)="onSubmit()">
+        <h2 *ngIf="!jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.hackathon' | translate}}</h2>
+        <h2 *ngIf="jsSelected">{{'pages.signup' | translate}} <br fxHide fxShow.lt-sm="true"/> {{'signUp.algorithms' | translate}}</h2>
+        <p class="teamMemberTitle">{{'signUp.memberRegister.teammate' | translate}} 2:</p>
+        <div fxLayout.lt-sm="column" fxLayout="row" fxLayoutAlign="space-around center" style="width: 100%">
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.lastName' | translate}}</mat-label>
+              <input matInput formControlName="lastName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.firstName' | translate}}</mat-label>
+              <input matInput formControlName="firstName" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.email' | translate}}</mat-label>
+              <input matInput formControlName="email" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.phone' | translate}}</mat-label>
+              <input matInput formControlName="phone" autocomplete="off">
+            </mat-form-field>
+          </div>
+          <div fxLayout="column" fxLayoutAlign="start center">
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.university' | translate}}</mat-label>
+              <input matInput formControlName="university" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.faculty' | translate}}</mat-label>
+              <input matInput formControlName="faculty" autocomplete="off">
+            </mat-form-field>
+            <mat-form-field appearance="fill" ngStyle.lt-sm="max-width: 180px">
+              <mat-label>{{'signUp.memberRegister.year' | translate}}</mat-label>
+              <mat-select formControlName="year">
+                <mat-option *ngFor="let year of years; let i = index" [value]="i">
+                  {{years[i]}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label>{{'signUp.memberRegister.cvLink' | translate}}</mat-label>
+              <input matInput formControlName="cvLink" autocomplete="off">
+            </mat-form-field>
+          </div>
+        </div>
+        <section class="gdpr">
+          <mat-checkbox formControlName="gdpr">{{'signUp.memberRegister.gdpr1' | translate}}
+            <a target="_blank" href="https://drive.google.com/file/d/1c-zt7SSgHOnEc_sN70w-GNy1hWY7UFyz/view">
+              {{'signUp.memberRegister.gdpr2' | translate}}
+            </a>
+            {{'signUp.memberRegister.gdpr3' | translate}}
+          </mat-checkbox>
+        </section>
+        <p class="error" *ngIf="showError">{{'signUp.error' | translate}}</p>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer" fxHide.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>{{'signUp.back' | translate}}</button>
+          <button color="primary" mat-raised-button matStepperNext type="submit">{{'signUp.submit' | translate}}</button>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-around center" class="stepper-footer mobile" fxHide
+             fxShow.lt-sm="true">
+          <button color="primary" mat-stroked-button matStepperPrevious>
+            <mat-icon>navigate_before</mat-icon>
+          </button>
+          <button color="primary" mat-raised-button type="submit">
+            <mat-icon>done</mat-icon>
+          </button>
+        </div>
+      </form>
+    </mat-step>
+  </mat-horizontal-stepper>
+  <div class="success" *ngIf="submitted">
+    <p class="successMessage">
+      {{'signUp.successMessage' | translate}}
+    </p>
+    <button color="primary" mat-raised-button routerLink="/home">{{'signUp.back' | translate}}</button>
+  </div>
+</div>

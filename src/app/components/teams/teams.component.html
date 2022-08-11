@@ -1,0 +1,95 @@
+<div class="teams">
+  <h2>Echipe algoritmica: {{janeStreetTeams.length}}</h2>
+  <table mat-table [dataSource]="janeStreetTeams" class="mat-elevation-z8" fxHide.lt-sm="true">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Echipa </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.teamName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="redistribution">
+      <th mat-header-cell *matHeaderCellDef> Redistrib. </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.redistribution}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="captain">
+      <th mat-header-cell *matHeaderCellDef> Capitan </th>
+      <td mat-cell *matCellDef="let team"> {{team.captainInfo.firstName}} {{team.captainInfo.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate1">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 1 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate1Info.firstName}} {{team.teammate1Info.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate2">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 2 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate2Info.firstName}} {{team.teammate2Info.lastName}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <h2>Echipe Deutsche Bank: {{deutscheBankTeams.length}}</h2>
+  <table mat-table [dataSource]="deutscheBankTeams" class="mat-elevation-z8" fxHide.lt-sm="true">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Echipa </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.teamName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="redistribution">
+      <th mat-header-cell *matHeaderCellDef> Redistrib. </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.redistribution}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="captain">
+      <th mat-header-cell *matHeaderCellDef> Capitan </th>
+      <td mat-cell *matCellDef="let team"> {{team.captainInfo.firstName}} {{team.captainInfo.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate1">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 1 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate1Info.firstName}} {{team.teammate1Info.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate2">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 2 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate2Info.firstName}} {{team.teammate2Info.lastName}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <h2>Echipe BCR: {{bcrTeams.length}}</h2>
+  <table mat-table [dataSource]="bcrTeams" class="mat-elevation-z8" fxHide.lt-sm="true">
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Echipa </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.teamName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="redistribution">
+      <th mat-header-cell *matHeaderCellDef> Redistrib. </th>
+      <td mat-cell *matCellDef="let team"> {{team.teamInfo.redistribution}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="captain">
+      <th mat-header-cell *matHeaderCellDef> Capitan </th>
+      <td mat-cell *matCellDef="let team"> {{team.captainInfo.firstName}} {{team.captainInfo.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate1">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 1 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate1Info.firstName}} {{team.teammate1Info.lastName}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="teammate2">
+      <th mat-header-cell *matHeaderCellDef> Coechipier 2 </th>
+      <td mat-cell *matCellDef="let team"> {{team.teammate2Info.firstName}} {{team.teammate2Info.lastName}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

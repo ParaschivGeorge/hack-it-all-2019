@@ -1,0 +1,77 @@
+:host {
+  box-shadow: none;
+  background: none;
+  width: 100vw;
+}
+
+.sponsors {
+  @media only screen and (min-width: 1280px) and (max-width: 1439px) {
+    width: 1264px;
+  }
+  @media only screen and (min-width: 1440px) {
+    width: 1424px;
+  }
+
+  .title {
+    background: white;
+    border-radius: 5px;
+    padding: 0 36px;
+    margin-bottom: 64px;
+    width: 310px;
+
+    @media only screen and (max-width:350px) {
+      padding: 0 18px;
+      width: 100%;
+    }
+
+    @media only screen and (max-width:959px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .sponsor {
+    margin-bottom: 64px;
+    background: white;
+    border-radius: 5px;
+    padding: 12px 36px;
+
+    @media only screen and (max-width:959px) {
+      margin-bottom: 16px;
+    }
+
+    @media only screen and (min-width: 1280px) {
+      max-width: calc(50% + 160px);
+    }
+
+    img {
+      margin-right: 36px;
+      max-width: 50%;
+      height: auto;
+      cursor: pointer;
+      @media only screen and (max-width:600px) {
+        max-width: 100%;
+        margin-right: 0;
+      }
+      @media only screen and (min-width: 1440px) {
+        max-width: 40%;
+      }
+    }
+  }
+  .media-partner {
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background: white;
+    width: 290px;
+    height: 290px;
+    cursor: pointer;
+    padding: 16px;
+    @media only screen and (max-width:350px) {
+      width: 100%;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+    }
+  }
+}

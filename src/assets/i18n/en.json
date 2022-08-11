@@ -1,0 +1,123 @@
+{
+  "pages": {
+    "home": "Home",
+    "about": "About",
+    "signup": "Sign Up",
+    "faq": "FAQ",
+    "faqShort": "FAQ",
+    "sponsors": "Sponsors"
+  },
+  "home": {
+    "homeText": {
+      "para1": "Are you looking for a programming contest that will test your ability to work under pressure with 2 other masterminds in hacking? Are you looking forward to demonstrating your programming skills and meeting people who are excited about multiple intellectual challenges?",
+      "para2": "This edition HackITall returns in a new formula, in the online environment. A series of mini-hackathons will be the perfect challenge for all coding enthusiasts eager to push their limits and test their programming skills.",
+      "para3": "Team up with 2 friends and come together at HackITall to prove that you are the best! Enter the battle for the big prizes and show us what you are capable of between 5th and 6th of December 2020!"
+    }
+  },
+  "about": {
+    "aboutText": {
+      "para1": "HackITall is an event that focuses on students from computer science colleges who are passionate about IT&C. Its purpose is to encourage their personal development and to improve their technical competencies. In an engaging environment, this hackathon challenges them to build teamwork skills under the pressure of a given deadline.",
+      "para2": {
+        "main": "HackITall consists of many competitions:",
+        "item1": "Two mini-hackathons which involves the development of fully functional software projects within 24 hours on a theme given by the official sponsors",
+        "item2": "The algorithmical competition that last 6 hours, during which competitors will have to solve certain problems; the solutions will be judged according to the performance achieved"
+      },
+      "para3": "Being in its seventh edition, HackITall is a tradition, and due to the success of such an event and the desire of many students to participate, it runs during two editions in a university year: in winter and in spring. The last edition gathered no less than 65 teams of 3 members each.  20 of them were chosen by the representatives of the main sponsor to participate.",
+      "para4": "In this semester the event takes place online on the weekend of December 5-6, 2020. The registration period is 2-14 November."
+    }
+  },
+  "frequentQuestions": {
+    "questions": {
+      "q1": {
+        "q": "Who is on the jury?",
+        "a": "The jury is made up of representatives of the main sponsor."
+      },
+      "q2": {
+        "q": "Who selects the teams?",
+        "a": "The participating teams are selected by the event sponsor."
+      },
+      "q3": {
+        "q": "How long is the contest?",
+        "a": "The contest consists of two mini-hackathons which last 24 hours and one algorithmical competition which lasts 6 hours. After each sample the teams present what they have done, and the jury decides the winners."
+      },
+      "q4": {
+        "q": "When do the tests start?",
+        "a": "All of the competitions will start on Saturday, December 5, at 10 am."
+      },
+      "q5": {
+        "q": "Can I participate in both competitions?",
+        "a": "No, because the two tests run in parallel."
+      },
+      "q6": {
+        "q": "What is the structure of a team?",
+        "a": "A team consists of 3 students."
+      },
+      "q7": {
+        "q": "Can I participate if I am not from the Faculty of Automatic Control and Computers Science?",
+        "a": "Yes you can. We want mixed teams this year."
+      },
+      "q8": {
+        "q": "Do we have to use certain programming languages?",
+        "a": "There are no programming language restrictions."
+      },
+      "q9": {
+        "q": "Do I have to pay a registration fee to participate?",
+        "a": "No, registration is free."
+      },
+      "q10": {
+        "q": "Can I register for HackITall, even if this is my first hackathon?",
+        "a": "Yes, we encourage you to register, because \"You are learning by doing.\""
+      }
+    }
+  },
+  "signUp": {
+    "signUpFor": "Sign up for",
+    "algorithms": "Algorithms",
+    "hackathon": "Hackathon",
+    "next": "Next",
+    "back": "Back",
+    "submit": "Submit",
+    "successMessage": "You have successfully registered!",
+    "error": "An error occurred, please try again later.",
+    "register": {
+      "hackDesc": "During this challenge you will have the opportunity to develop a fully functional software project within 24 hours, on a topic given by the official sponsor. Take 2 friends and register to enter the race for the grand prize together!",
+      "algoDesc": "In this challenge you will have the opportunity to prove within 6 hours that the algorithms have no secrets for you and the other 2 colleagues with whom you will form a team. Apply to show that you are the best!"
+    },
+    "teamRegister": {
+      "team": "Team",
+      "teamName": "Team name",
+      "chooseCompetition": "Choose the competition",
+      "competition": "Competition",
+      "redistribution": "I also register my team for the other hackathon which will represent the second option"
+    },
+    "memberRegister": {
+      "captain": "Captain",
+      "teammate": "Teammate",
+      "lastName": "Last name",
+      "firstName": "First name",
+      "email": "Email",
+      "phone": "Phone",
+      "university": "University",
+      "faculty": "Faculty",
+      "year": "Year",
+      "years": {
+        "year1": "1st degree year",
+        "year2": "2nd degree year",
+        "year3": "3rd degree year",
+        "year4": "4th degree year",
+        "year5": "1st master year",
+        "year6": "2nd master year"
+      },
+      "cvLink": "CV link",
+      "gdpr1": "By registering for this event, I confirm that I read the ",
+      "gdpr2": "information concerning the protection of personal data",
+      "gdpr3": " which is attached and I agree with the entire content."
+    }
+  },
+  "sponsors": {
+    "mediaPartners": "Partners",
+    "janeStreetDesc": "Jane Street is a quantitative trading firm and global liquidity provider. They are active in more than 45 countries around the world with daily transactions of over 21 billion dollars. They stay successful by using innovative technology, a scientific approach and a deep understanding of markets, all of them based on mathematical modeling and strategies.",
+    "dbDesc": "DB Global Technology is Deutsche Bank’s technology centre in Central and Eastern Europe where the latest generation applications are developed for various types of financial services such as: Private & Commercial Bank, Wealth Management, Anti-Financial Crime, Compliance, Non-financial Risk, Global Procurement. The company consists of a team of close to 1,000 specialists and covers a wide-range of disciplines: project management, IT architecture, business and technology analysis, software development, quality assurance.",
+    "bcrDesc": "Banca Comerciala Romana (BCR), member of Erste Group, is the most important Romanian financial group, providing universal bank services, leasing, private pensions, investment funds, savings and credits for housing, through branches and corporate centers. BCR constantly invests in secure and easy access to banking services, banking for everybody, long-term financial counseling and products which comply with every customer’s potential."
+  }
+}

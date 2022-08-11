@@ -1,0 +1,14 @@
+.about {
+  padding: 32px 24px;
+  .about-text {
+    @media only screen and (min-width:1279px) {
+      padding-right: 24px;
+    }
+  }
+  img {
+    @media only screen and (max-width:600px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

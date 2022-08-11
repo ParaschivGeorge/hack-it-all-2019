@@ -1,0 +1,44 @@
+<mat-progress-bar mode="indeterminate" class="loading-bar" *ngIf="loading"></mat-progress-bar>
+<div class="nav-bar">
+  <mat-toolbar class="mat-elevation-z6" [ngStyle.lt-md]="{'padding.px': 16}">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button color="primary" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <img fxHide.lt-md="true" class="logo" src="../assets/images/nav-bar/logo.png" alt="Hack It All">
+    <span class="fill-remaining-space"></span>
+
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button class="normal-link" routerLink="/home" routerLinkActive="active-link">{{'pages.home' | translate}}</a>
+      <a mat-button class="normal-link" routerLink="/about" routerLinkActive="active-link">{{'pages.about' | translate}}</a>
+      <a mat-button class="normal-link" routerLink="/signup" routerLinkActive="active-link">{{'pages.signup' | translate}}</a>
+      <a mat-button class="normal-link" routerLink="/faq" routerLinkActive="active-link" fxHide fxShow.gt-md="true">{{'pages.faq' | translate}}</a>
+      <a mat-button class="normal-link" routerLink="/faq" routerLinkActive="active-link" fxHide.gt-md="true">{{'pages.faqShort' | translate}}</a>
+      <a mat-button class="normal-link" routerLink="/sponsors" routerLinkActive="active-link">{{'pages.sponsors' | translate}}</a>
+    </div>
+
+    <img fxHide.gt-sm="true" class="logo" src="../assets/images/nav-bar/logo.png" alt="Hack It All">
+    <img class="flag-icon" src="../assets/images/nav-bar/ro-flag.png" height="27" width="27" alt="Ro"
+         (click)="selectRoLanguage()"/>
+    <img class="flag-icon" src="../assets/images/nav-bar/en-flag.png" height="27" width="27" alt="En"
+         (click)="selectEnLanguage()"/>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="content" hasBackdrop="false">
+    <mat-sidenav #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button class="normal-link" routerLink="/home" routerLinkActive="active-link">{{'pages.home' | translate}}</a>
+        <a mat-button class="normal-link" routerLink="/about" routerLinkActive="active-link">{{'pages.about' | translate}}</a>
+        <a mat-button class="normal-link" routerLink="/signup" routerLinkActive="active-link">{{'pages.signup' | translate}}</a>
+        <a mat-button class="normal-link" routerLink="/faq" routerLinkActive="active-link">{{'pages.faqShort' | translate}}</a>
+        <a mat-button class="normal-link" routerLink="/sponsors" routerLinkActive="active-link">{{'pages.sponsors' | translate}}</a>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

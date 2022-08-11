@@ -1,0 +1,16 @@
+<div class="faq" fxLayout="row" fxLayout.lt-lg="column" fxLayoutAlign="center center">
+  <div class="faq-text">
+    <h2 fxHide.lt-md="true">{{'pages.faq' | translate}}</h2>
+    <h2 fxHide fxShow.lt-md="true">{{'pages.faqShort' | translate}}</h2>
+    <mat-expansion-panel *ngFor="let question of questions; let i = index" #panel hideToggle class="question mat-elevation-z0">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{question.q}}
+        </mat-panel-title>
+        <mat-icon>{{panel.expanded? 'remove' : 'add'}}</mat-icon>
+      </mat-expansion-panel-header>
+      <p>{{question.a}}</p>
+    </mat-expansion-panel>
+  </div>
+  <img src="../../../assets/images/faq-image.png" alt="HackItAll FAQ" height="470" width="667"/>
+</div>

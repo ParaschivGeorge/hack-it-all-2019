@@ -1,0 +1,150 @@
+:host {
+  max-width: 800px;
+}
+
+.signup {
+  width: 100%;
+  text-align: center;
+
+  mat-step-header {
+    display: none;
+  }
+
+
+  .mat-form-field {
+    width: 100%;
+    max-width: 360px;
+  }
+  .teamForm {
+    .mat-form-field {
+      margin: 24px 0;
+    }
+  }
+
+  .stepper-footer {
+    width: 100%;
+    margin: 24px 0;
+
+    mat-icon {
+      height: 40px;
+      width: 40px;
+      font-size: 40px;
+      line-height: 40px;
+    }
+  }
+
+  .register {
+    .hackRegister {
+      background-image: url('../../../assets/images/signup/circuit-background.png');
+      background-size: cover;
+      @media only screen and (min-width: 960px) {
+        border-bottom-left-radius: 8px;
+      }
+      @media only screen and (max-width: 959px) {
+        border-top-right-radius: 8px;
+      }
+      border-top-left-radius: 8px;
+      width: 50%;
+
+      h2, p {
+        color: white;
+        border-color: white;
+      }
+    }
+
+    .algoRegister {
+      width: 50%;
+    }
+
+    p {
+      padding: 0 24px;
+
+      @media only screen and (min-width: 960px) {
+        min-height: 240px;
+      }
+    }
+
+    .registerButton {
+      margin-bottom: 32px;
+    }
+  }
+
+  form {
+    padding: 0 24px;
+
+    .teamSelector {
+      @media only screen and (max-width: 599px) {
+        max-width: 262px;
+        width: 80%;
+      }
+      margin: 36px 0;
+      cursor: pointer;
+      border-radius: 8px;
+      width: 480px;
+      height: 96px;
+
+      div:first-child {
+        border-right: 1px solid #0277bd;
+        box-sizing: border-box;
+      }
+
+      div {
+        display: inline-block;
+        width: 50%;
+        text-align: center;
+        height: 100%;
+
+        p {
+          line-height: 24px;
+          font-family: 'Roboto', sans-serif;
+          font-size: 20px;
+          font-weight: bold;
+          margin: 24px 0;
+        }
+      }
+
+      .selected {
+        p {
+          color: white;
+        }
+      }
+    }
+
+    .dbSelected {
+      background: linear-gradient(90deg, #0277bd 50%, #ECECEC 50%);
+    }
+
+    .bcrSelected {
+      background: linear-gradient(90deg, #ECECEC 50%, #0277bd 50%);
+    }
+
+    .noSelection {
+      background: #ECECEC;
+    }
+
+    .jsSelected {
+      max-width: 240px;
+      background: #0277bd;
+    }
+
+    p.teamMemberTitle {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    p.error {
+      color: red;
+      font-size: 20px;
+    }
+  }
+
+  .success {
+    margin: 48px;
+    .successMessage {
+      font-size: 40px;
+      font-weight: bold;
+      margin-bottom: 48px;
+      margin-top: 0;
+    }
+  }
+}
